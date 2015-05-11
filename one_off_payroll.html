@@ -1,0 +1,483 @@
+﻿<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+<meta charset="utf-8"/>
+<title>Visagepayroll | One off Payroll</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<meta content="" name="description"/>
+<meta content="" name="author"/>
+
+<link href="style.css" rel="stylesheet" type="text/css"/>
+
+<!-- BEGIN GLOBAL MANDATORY STYLES -->
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css"/>
+<link href="assets/global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link href="assets/global/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css"/>
+<link href="assets/global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+<link href="assets/global/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css"/>
+<!-- END GLOBAL MANDATORY STYLES -->
+<!-- BEGIN PAGE LEVEL STYLES -->
+<link rel="stylesheet" type="text/css" href="assets/global/plugins/select2/select2.css"/>
+<!-- END PAGE LEVEL SCRIPTS -->
+<!-- BEGIN THEME STYLES -->
+<link href="assets/global/css/components.css" rel="stylesheet" type="text/css"/>
+<link href="assets/global/css/plugins.css" rel="stylesheet" type="text/css"/>
+<link href="assets/admin/layout/css/layout.css" rel="stylesheet" type="text/css"/>
+<link id="style_color" href="assets/admin/layout/css/themes/default.css" rel="stylesheet" type="text/css"/>
+<link href="assets/admin/layout/css/custom.css" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet" type="text/css" href="assets/global/plugins/bootstrap-datepicker/css/datepicker3.css"/>
+<link rel="stylesheet" type="text/css" href="assets/global/plugins/bootstrap-select/bootstrap-select.min.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css"/>
+<!-- END THEME STYLES -->
+<link rel="shortcut icon" href="favicon.ico"/>
+
+
+</head>
+<!-- END HEAD -->
+<!-- BEGIN BODY -->
+<!-- DOC: Apply "page-header-fixed-mobile" and "page-footer-fixed-mobile" class to body element to force fixed header or footer in mobile devices -->
+<!-- DOC: Apply "page-sidebar-closed" class to the body and "page-sidebar-menu-closed" class to the sidebar menu element to hide the sidebar by default -->
+<!-- DOC: Apply "page-sidebar-hide" class to the body to make the sidebar completely hidden on toggle -->
+<!-- DOC: Apply "page-sidebar-closed-hide-logo" class to the body element to make the logo hidden on sidebar toggle -->
+<!-- DOC: Apply "page-sidebar-hide" class to body element to completely hide the sidebar on sidebar toggle -->
+<!-- DOC: Apply "page-sidebar-fixed" class to have fixed sidebar -->
+<!-- DOC: Apply "page-footer-fixed" class to the body element to have fixed footer -->
+<!-- DOC: Apply "page-sidebar-reversed" class to put the sidebar on the right side -->
+<!-- DOC: Apply "page-full-width" class to the body element to have full width page without the sidebar menu -->
+<body class="page-header-fixed page-quick-sidebar-over-content ">
+<!-- BEGIN HEADER -->
+<div class="page-header navbar navbar-fixed-top">
+	<!-- BEGIN HEADER INNER -->
+	<div class="page-header-inner">
+		<!-- BEGIN LOGO -->
+		<div class="page-logo">
+			<a href="index.html">
+			<img src="images/logo.png" alt="logo" class="logo-default"/>
+			</a>
+			<div class="menu-toggler sidebar-toggler hide">
+				<!-- DOC: Remove the above "hide" to enable the sidebar toggler button on header -->
+			</div>
+		</div>
+		<!-- END LOGO -->
+        <div class="topHeader">
+            <div class="col-sm-12">
+                <div class=""><!--pull-right-->
+            <div class="col-sm-offset-6 col-sm-3">
+                <a href="payroll.html" class="runPayroll"><i class="fa fa-plus-circle greenText"></i> run company payroll</a>
+            </div>
+                <div class="col-sm-3">
+                <input type="text" placeholder="Search for XYZ" class="SearchTop"/>
+            </div>
+                    </div>
+             </div>
+
+        </div>
+		<!-- BEGIN RESPONSIVE MENU TOGGLER -->
+		<a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse" data-target=".navbar-collapse">
+		</a>
+		<!-- END RESPONSIVE MENU TOGGLER -->
+		
+	</div>
+	<!-- END HEADER INNER -->
+</div>
+<!-- END HEADER -->
+<div class="clearfix">
+</div>
+<!-- BEGIN CONTAINER -->
+<div class="page-container">
+	<!-- BEGIN SIDEBAR -->
+	<div class="page-sidebar-wrapper">
+		<!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
+		<!-- DOC: Change data-auto-speed="200" to adjust the sub menu slide up/down speed -->
+		<div class="page-sidebar navbar-collapse collapse">
+			<!-- BEGIN SIDEBAR MENU -->
+			<!-- DOC: Apply "page-sidebar-menu-light" class right after "page-sidebar-menu" to enable light sidebar menu style(without borders) -->
+			<!-- DOC: Apply "page-sidebar-menu-hover-submenu" class right after "page-sidebar-menu" to enable hoverable(hover vs accordion) sub menu mode -->
+			<!-- DOC: Apply "page-sidebar-menu-closed" class right after "page-sidebar-menu" to collapse("page-sidebar-closed" class must be applied to the body element) the sidebar sub menu mode -->
+			<!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
+			<!-- DOC: Set data-keep-expand="true" to keep the submenues expanded -->
+			<!-- DOC: Set data-auto-speed="200" to adjust the sub menu slide up/down speed -->
+			<ul class="page-sidebar-menu" data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200">
+				<!-- DOC: To remove the sidebar toggler from the sidebar you just need to completely remove the below "sidebar-toggler-wrapper" LI element -->
+				<li class="sidebar-toggler-wrapper">
+					<!-- BEGIN SIDEBAR TOGGLER BUTTON -->
+					<div class="sidebar-toggler">
+					</div>
+					<!-- END SIDEBAR TOGGLER BUTTON -->
+				</li>
+				<!-- DOC: To remove the search box from the sidebar you just need to completely remove the below "sidebar-search-wrapper" LI element -->
+				
+                <li class="start ">
+					<div href="javascript:;" class="text-center users">
+					<div><img src="images/user_pic.png" alt="" class="userPic img-responsive"/>
+					</div>
+					<span class="userName">stephaine lucas</span>
+					<a href="javascript:;" class="signOut">sign out</a>
+					</div>
+					
+				</li>
+
+				<li class="start ">
+					<a href="dashboard.html">
+					<i class="icon-home"></i>
+					<span class="title">Dashboard</span>
+					<span class="arrow "></span>
+					</a>
+					
+				</li>
+			    <li>
+			        <a href="payroll.html">
+			            <i class="icon-basket"></i>
+			            <span class="title">Payroll</span>
+			            <span class="arrow "></span>
+			        </a>
+					
+			    </li>
+                <li>
+					<a href="javascript:;">
+					<i class="icon-basket"></i>
+					<span class="title">Tax</span>
+					<span class="arrow "></span>
+					</a>
+					
+				</li>
+				<li>
+					<a href="all_employee.html">
+					<i class="icon-rocket"></i>
+					<span class="title">Employees</span>
+					<span class="arrow "></span>
+					</a>
+					
+				</li>
+				<!-- BEGIN FRONTEND THEME LINKS -->
+				<li>
+					<a href="javascript:;">
+					<i class="icon-star"></i>
+					<span class="title">
+					Reports </span>
+					<span class="arrow">
+					</span>
+					</a>
+					
+				</li>
+				<!-- END FRONTEND THEME LINKS -->
+				<li>
+					<a href="javascript:;">
+					<i class="icon-diamond"></i>
+					<span class="title">To Do</span>
+					<span class="arrow "></span>
+					</a>
+					
+				</li>
+				<li>
+					<a href="javascript:;">
+					<i class="icon-puzzle"></i>
+					<span class="title">Settings</span>
+					<span class="arrow "></span>
+					</a>
+					
+				</li>
+
+			</ul>
+			<!-- END SIDEBAR MENU -->
+            <div class="text-center">
+                <img src="images/advertisemnet.png" alt="" class="img-responsive" />
+            </div>
+		</div>
+	</div>
+	<!-- END SIDEBAR -->
+	<!-- BEGIN CONTENT -->
+	<div class="page-content-wrapper">
+		<div class="page-content">
+			<!-- BEGIN SAMPLE PORTLET CONFIGURATION MODAL FORM-->
+			<div class="col-sm-12 text-center">
+                <div class="topAdv">
+                <img src="images/top_adv.png" alt="" class="img-responsive" />
+                    <!--<span class="topAdvCross"><img src="images/top_adv_closeBtn.png" alt="" /></span>-->
+                    </div>
+			</div>
+			<div class="clear"></div>
+            <div class="row marginTop20">
+                <div class="col-sm-12">
+                   <div class="portlet light">
+                      <div class="portlet-title grey-border">
+                          <div class="caption greenText"><i class="fa fa-gears"></i><span class="bold uppercase">One off Payroll</span></div>
+                          <div class="col-sm-8 row pull-right">
+                          <div class="col-sm-5">
+                          <div class="input-group date date-picker">
+												<input type="text" class="form-control">
+												<span class="input-group-btn">
+												<button class="btn default date-set" type="button"><i class="fa fa-calendar"></i></button>
+												</span>
+											</div>
+                          </div>
+                          <div class="col-sm-1 marginTop10 text-center">To</div>
+                          <div class="col-sm-5">
+                          <div class="input-group date date-picker">
+												<input type="text" class="form-control">
+												<span class="input-group-btn">
+												<button class="btn default date-set" type="button"><i class="fa fa-calendar"></i></button>
+												</span>
+											</div>
+                          </div>
+							
+                                            
+						  </div>
+                      </div>
+                      <div class="portlet-body form marginTop20">
+                            <div class="col-sm-12">
+                                <button class="btn peach">Add New <i class="fa fa-icon fa-plus"></i></button>
+                                <div class="col-sm-3 pull-right row">
+                                <select class="bs-select form-control" data-style="btn-primary">
+									<option>Select Deductions</option>
+									<option>Option 1</option>
+									<option>Option 2</option>
+                                    <option>Option 3</option>
+									<option>Option 4</option>
+                                    <option>Option 5</option>
+									<option>Option 6</option>
+								</select>
+                                    </div>
+                             	<div class="table-responsive marginTop20">
+								
+
+                                     <table class="table table-striped table-hover table-bordered" id="sample_editable_1">
+							<thead>
+							<tr>
+								<th>
+									 Last Day of Pay Cycle
+								</th>
+								<th>
+									 Pay Date
+								</th>
+								<th>
+									 Payroll Status
+								</th>
+								<th>
+									 Off Cycle
+								</th>
+								<th>
+									 Edit
+								</th>
+								<th>
+									 Delete
+								</th>
+							</tr>
+							</thead>
+							<tbody>
+							<tr>
+								<td>
+									 12/13/2014
+								</td>
+								<td>
+									 01/23/2015
+								</td>
+								<td>
+									 In Process
+								</td>
+								<td class="center">
+									<input type="checkbox" checked class="make-switch" data-size="small">
+								</td>
+								<td>
+									<a class="edit" href="javascript:;">
+									Edit </a>
+								</td>
+								<td>
+									<a class="delete" href="javascript:;">
+									Delete </a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									 12/13/2014
+								</td>
+								<td>
+									 01/23/2015
+								</td>
+								<td>
+									 Processed
+								</td>
+								<td class="center">
+									<input type="checkbox" class="make-switch" data-size="small">
+								</td>
+								<td>
+									<a class="edit" href="javascript:;">
+									Edit </a>
+								</td>
+								<td>
+									<a class="delete" href="javascript:;">
+									Delete </a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									 12/13/2014
+								</td>
+								<td>
+									 01/23/2015
+								</td>
+								<td>
+									 In Process
+								</td>
+								<td class="center">
+									<input type="checkbox" checked class="make-switch" data-size="small">
+								</td>
+								<td>
+									<a class="edit" href="javascript:;">
+									Edit </a>
+								</td>
+								<td>
+									<a class="delete" href="javascript:;">
+									Delete </a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									 12/13/2014
+								</td>
+								<td>
+									 01/23/2015
+								</td>
+								<td>
+									 Processed
+								</td>
+								<td class="center">
+									<input type="checkbox" class="make-switch" data-size="small">
+								</td>
+								<td>
+									<a class="edit" href="javascript:;">
+									Edit </a>
+								</td>
+								<td>
+									<a class="delete" href="javascript:;">
+									Delete </a>
+								</td>
+							</tr>
+							</tbody>
+							</table>
+
+
+
+							</div>
+                            <div class="row marginTop20">
+                                <div class="col-md-5 col-sm-12">
+                                <div class="dataTables_info" id="sample_1_info" role="status" aria-live="polite">Showing 1 to 5 of 5 entries</div>
+                            </div>
+                            <div class="col-md-7 col-sm-12">
+                            <div class="dataTables_paginate paging_simple_numbers pull-right" id="sample_1_paginate">
+                            <ul class="pagination">
+                                <li class="paginate_button previous disabled" aria-controls="sample_1" tabindex="0" id="sample_1_previous"><a href="#"><i class="fa fa-angle-left"></i></a></li>
+                                <li class="paginate_button active" aria-controls="sample_1" tabindex="0"><a href="#">1</a></li>
+                                <li class="paginate_button next" aria-controls="sample_1" tabindex="0" id="sample_1_next">
+                                <a href="#"><i class="fa fa-angle-right"></i></a></li>
+                            </ul>
+                            </div>
+                            </div>
+                            </div>
+                             
+                         </div>
+                      </div>
+                      <div class="buttonsBottomContainer">
+                      		<div class="col-sm-12 row">
+                            	<button type="button" class="btn bottomButtons">Dashboard</button>
+                                <button type="button" class="btn bottomButtons">Cancel Payroll</button>
+                                <button type="button" class="btn logoutButtons">Logout</button>
+                            </div>
+                      </div>
+                   </div> 
+                </div>
+            </div>
+			<!-- END PAGE CONTENT-->
+		</div>
+		<!-- BEGIN CONTENT -->
+	</div>
+	<!-- END CONTENT -->
+	<!-- BEGIN QUICK SIDEBAR -->
+	<a href="javascript:;" class="page-quick-sidebar-toggler"><i class="icon-close"></i></a>
+	
+	<!-- END QUICK SIDEBAR -->
+</div>
+<!-- END CONTAINER -->
+<!-- BEGIN FOOTER -->
+<div class="page-footer">
+	<div class="page-footer-inner">
+        <div class="container">
+		 <div class="col-sm-offset-3 col-sm-3">
+             <span><img src="images/logo_bottom.png" alt="" /></span>
+		 </div>
+            <div class="pull-right col-sm-5">
+                <ul class="nav nav-tabs navBottom">
+                    <li><a href="javascript:;">home</a></li>
+                    <li><a href="javascript:;">about visage</a></li>
+                    <li><a href="javascript:;">the team</a></li>
+                    <li><a href="javascript:;">signup</a></li>
+                    <li><a href="javascript:;">contact</a></li>
+                </ul>
+            </div>
+            </div>
+	</div>
+	<div class="scroll-to-top">
+		<i class="icon-arrow-up"></i>
+	</div>
+</div>
+<!-- END FOOTER -->
+<!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
+<!-- BEGIN CORE PLUGINS -->
+<!--[if lt IE 9]>
+<script src="assets/global/plugins/respond.min.js"></script>
+<script src="assets/global/plugins/excanvas.min.js"></script> 
+<![endif]-->
+<script src="assets/global/plugins/jquery.min.js" type="text/javascript"></script>
+<script src="assets/global/plugins/jquery-migrate.min.js" type="text/javascript"></script>
+<!-- IMPORTANT! Load jquery-ui-1.10.3.custom.min.js before bootstrap.min.js to fix bootstrap tooltip conflict with jquery ui tooltip -->
+<script src="assets/global/plugins/jquery-ui/jquery-ui-1.10.3.custom.min.js" type="text/javascript"></script>
+<script src="assets/global/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="assets/global/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js" type="text/javascript"></script>
+<script src="assets/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js" type="text/javascript"></script>
+<script src="assets/global/plugins/jquery.blockui.min.js" type="text/javascript"></script>
+<script src="assets/global/plugins/jquery.cokie.min.js" type="text/javascript"></script>
+<script src="assets/global/plugins/uniform/jquery.uniform.min.js" type="text/javascript"></script>
+<script src="assets/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js" type="text/javascript"></script>
+
+<!-- BEGIN PAGE LEVEL PLUGINS -->   
+<script type="text/javascript" src="assets/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+<script type="text/javascript" src="assets/global/plugins/bootstrap-select/bootstrap-select.min.js"></script>
+<script type="text/javascript" src="assets/global/plugins/select2/select2.min.js"></script>
+<script type="text/javascript" src="assets/global/plugins/jquery-multi-select/js/jquery.multi-select.js"></script>
+
+
+<!-- END PAGE LEVEL PLUGINS -->
+
+<!-- END CORE PLUGINS -->
+<script src="assets/global/scripts/metronic.js" type="text/javascript"></script>
+<script src="assets/admin/layout/scripts/layout.js" type="text/javascript"></script>
+<script src="assets/admin/layout/scripts/quick-sidebar.js" type="text/javascript"></script>
+<script src="assets/admin/layout/scripts/demo.js" type="text/javascript"></script>
+<script src="assets/admin/pages/scripts/components-pickers.js"></script>
+<script src="assets/admin/pages/scripts/form-samples.js"></script>
+    <script src="assets/admin/pages/scripts/components-dropdowns.js"></script>
+    <script src="assets/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js" type="text/javascript"></script>
+
+<script>
+jQuery(document).ready(function() {    
+   Metronic.init(); // init metronic core components
+Layout.init(); // init current layout
+QuickSidebar.init(); // init quick sidebar
+Demo.init(); // init demo features
+ComponentsPickers.init();
+FormSamples.init();
+ComponentsDropdowns.init();
+ComponentsFormTools.init();
+});
+</script>
+<!-- END JAVASCRIPTS -->
+</body>
+<!-- END BODY -->
+</html>
